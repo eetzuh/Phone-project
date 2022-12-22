@@ -15,21 +15,24 @@
         </div>
     </header>
     <main>
-        <div class="phone-body">
-            <div class="phonebox">
-                <div class="phone-display"><div class="display-text"><p id="textual"></p></div></div>
-            </div>
-            <div class="buttons">
-                <!-- add arrows -->
-                <div class="navigation"><button name="ok" class="nav">(   )</button></div>
-                <div class="first"><button name="1" class="numbers" onclick="clickingOnButton(' ')">  <strong>1</strong> space</button><button name="2" class="numbers" onclick="clickingOnButton('abc')"><strong>2</strong> abc</button><button name="3" class="numbers" onclick="clickingOnButton('def')"><strong>3</strong> def</button></div>
-                <div class="second"><button name="4" class="numbers" onclick="clickingOnButton('ghi')"><strong>4</strong> ghi</button><button name="5" class="numbers" onclick="clickingOnButton('jkl')"><strong>5</strong> jkl</button><button name="6" class="numbers" onclick="clickingOnButton('mno')"><strong>6</strong> mno</button></div>
-                <div class="third"><button name="7" class="numbers" onclick="clickingOnButton('pqrs')"><strong>7</strong> pqrs</button><button name="8" class="numbers" onclick="clickingOnButton('tuv')"><strong>8</strong> tuv</button><button name="9" class="numbers" onclick="clickingOnButton('wxyz')"><strong>9</strong> wxyz</button></div>
-            </div>
+        <div class="container-phone">
+            <div class="phone-body">
+                <div class="screen">
+                    <div class="phone-display"><p id="textual"></p></div>
+                </div>
+                <div class="buttons">
+                    <!-- add arrows -->
+                    <div class="navigation"><button name="ok" class="nav" onclick="submit()">(   )</button></div>
+                    <div class="first"><button name="1" class="numbers" onclick="eraser()">  <strong>1</strong> delete</button><button name="2" class="numbers" onclick="clickingOnButton('abc')"><strong>2</strong> abc</button><button name="3" class="numbers" onclick="clickingOnButton('def')"><strong>3</strong> def</button></div>
+                    <div class="second"><button name="4" class="numbers" onclick="clickingOnButton('ghi')"><strong>4</strong> ghi</button><button name="5" class="numbers" onclick="clickingOnButton('jkl')"><strong>5</strong> jkl</button><button name="6" class="numbers" onclick="clickingOnButton('mno')"><strong>6</strong> mno</button></div>
+                    <div class="third"><button name="7" class="numbers" onclick="clickingOnButton('pqrs')"><strong>7</strong> pqrs</button><button name="8" class="numbers" onclick="clickingOnButton('tuv')"><strong>8</strong> tuv</button><button name="9" class="numbers" onclick="clickingOnButton('wxyz')"><strong>9</strong> wxyz</button></div>
+                    <div class="third"><button name="hash" class="numbers" onclick="clickingOnButton('#')"><strong>#</strong></button><button name="0" class="numbers" onclick="clickingOnButton(' ')"><strong>0</strong> spc</button><button name="asterisk" class="numbers" onclick="clickingOnButton('*')"><strong>*</strong></button></div>
+                </div>
+        </div>
         </div>
         <div class="user-inputs">
-            <div class="header two"><h1 class="message-menu">Your messages:</h1></div>
-            <div class="messages"></div>
+            <div class="outputs"><h1 class="message-menu">Your messages:</h1></div>
+            <div class="messages"><p id="submited-msg"></p></div>
         </div>
     </main>
     <script src="app.js"></script>
