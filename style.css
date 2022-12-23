@@ -151,3 +151,60 @@ button {
   padding: 2rem;
 }
 
+.navigation,
+.first,
+.second,
+.third {
+  margin: 2%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftButton{
+  background-color: rgb(233, 233, 242);
+  width: 4rem;
+  height: 2rem;
+  padding: 0;
+  margin: 1rem;
+  border-radius:18% 68% 35% 57% / 30% 41% 60% 70% ;
+  text-align: left;
+}
+
+.rightButton{
+  background-color: rgb(233, 233, 242);
+  width: 4rem;
+  height: 2rem;
+  padding: 0;
+  margin: 1rem;
+  border-radius:68% 18% 57% 35% / 41% 30% 70% 60% ;
+  text-align: left;
+}
+
+.middleButton{
+  background-color: rgb(233, 233, 242);
+  width: 4rem;
+  height: 2rem;
+  padding: 0;
+  margin: 1rem;
+  border-radius:50% 50% 50% 50% / 50% 50% 50% 50% ;
+  text-align: left;
+}
+
+.numberInsideButton{
+  position: relative;
+  top:-0.4rem;
+  font-family: Georgia;
+  padding-left: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.textInsideButton{
+  position: relative;
+  top:-0.4rem;
+  left: 0.1rem;
+  font-family: Georgia;
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+
