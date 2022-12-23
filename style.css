@@ -1,5 +1,6 @@
 body {
   height: 100%;
+  overflow: hidden;
 }
 .header {
   height: auto;
@@ -17,7 +18,7 @@ h1 {
 
 main {
   display: flex;
-  height: 70vh;
+  height: fit-content;
 }
 
 .container-phone {
@@ -25,11 +26,13 @@ main {
   margin-left: 2rem;
   display: flex;
   margin-left: 18%;
+  margin-top: 0 !important;
 }
 .phone-body {
   width: 350px;
   aspect-ratio: 0.37/1;
   margin: auto;
+  margin-top: 0 !important;
 }
 
 .screen {
@@ -58,19 +61,33 @@ main {
   margin: auto;
   margin-bottom: 15%;
   border-radius: 5%;
-  position: relative;
   word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
 }
 
 #textual {
   padding: 1rem;
   font-family: "Lucida Sans Typewriter", "Lucida Console", monaco,
     "Bitstream Vera Sans Mono", monospace;
-  font-size: 17px;
+  font-size: 19px;
   font-style: normal;
   font-variant: normal;
   font-weight:bolder;
   line-height: 20px;
+  margin: 0
+}
+#time{
+ text-align: right;
+ margin: 1rem;
+ margin-bottom: 0;
+ font-family: "Lucida Sans Typewriter", "Lucida Console", monaco,
+    "Bitstream Vera Sans Mono", monospace;
+  font-size: 15px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight:bolder;
+
 }
 
 .buttons {
@@ -84,15 +101,37 @@ main {
   flex-direction: column;
   margin: auto;
 }
+.navigation,
+.first,
+.second,
+.third {
+  margin: 2%;
+  text-align: center;
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  margin: 0;
+  width: 21%;
+  height: 20%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .user-inputs {
   display: flex;
-  margin-top: 7%;
   margin-left: 10%;
-  margin-right: 0;
+  margin-right: 2%;
   margin-bottom: 0;
+  margin-top: 5%;
   flex-direction: column;
   width: 100%;
+
 }
 
 .outputs {
@@ -101,13 +140,15 @@ main {
   margin-bottom: 2%;
   margin-top: 0;
   margin-right: 50%;
+
 }
 .messages {
-  height: 80%;
+  height: 50%;
   width: 80%;
   background-color: rgb(224, 227, 231);
   margin-bottom: 5%;
   aspect-ratio: 1/0.8;
+  padding: 2rem;
 }
 
 .navigation,
@@ -167,7 +208,3 @@ main {
   vertical-align: middle;
 }
 
-/* button {
-  width: 21%;
-  height: 20%;
-} */
