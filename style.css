@@ -1,6 +1,5 @@
 body {
   height: 100%;
-  overflow: hidden;
 }
 .header {
   height: auto;
@@ -36,36 +35,55 @@ main {
 }
 
 .screen {
-  height: 46%;
-  width: 100%;
+  height: 50%;
+  width: 81%;
   background: rgb(225, 241, 250);
   background: radial-gradient(closest-side rgb(217, 231, 240) 0%, rgb(182, 201, 211) 0%, rgba(184,207,233,1) 5%);
   display: flex;
+  flex-direction: column;
   clip-path: polygon(
-    1000% 0,
-    92% 5%,
+    1000% 15%,
+    92% 8%,
     97% 75%,
     95% 100%,
     5% 100%,
     3% 75%,
-    8% 5%
+    8% 20%
   );
   border-bottom-left-radius: 20%;
   border-bottom-right-radius: 20%;
-  border-top-right-radius: 50%;
-  border-top-left-radius: 50%;
+  border-top-right-radius: 70%;
+  border-top-left-radius:70%;
+  border: 23px solid rgb(156, 181, 196);
+  border-bottom: 0px;
+  border-top: 0px;
+  margin-left: 7px;
+  position: relative;
+  z-index: 1;
+}
+.upperPart{
+  height: 20%;
+  width:95%;
+  border-top-left-radius: 70%;
+  border-top-right-radius: 70%;
+  margin-top: 30%;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 .phone-display {
-  height: 60%;
-  width: 70%;
+  height: 40%;
+  width: 73%;
   background-color: rgb(150, 211, 191);
-  margin: auto;
-  margin-bottom: 15%;
+  margin-bottom: 20%;
   border-radius: 5%;
   word-wrap: break-word;
-  display: flex;
-  flex-direction: column;
   text-align: center;
+  border: 8px solid rgb(56, 64, 65);
+  position: absolute;
+  bottom:0;
+ margin-left: 10%;
+ box-shadow: 0px 0px 0px 11px rgba(97, 153, 190, 1),0px -30px 0px 12px  rgba(97, 153, 190, 1);
 }
 
 #textual {
@@ -95,7 +113,7 @@ main {
 
 .buttons {
   height: 54%;
-  width: 90%;
+  width: 95%;
   background: rgb(230,246,255);
   background: radial-gradient(closest-side rgba(230,246,255,1) 0%, rgba(221,243,255,1) 73%, rgba(184,207,233,1) 79%);
   box-shadow: 0px -22px 18px 30px rgba(184,207,233,0.75) inset;
@@ -105,24 +123,41 @@ main {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding-left: 5%;
-  padding-right: 5%;
 }
 .fold-cont{
   height:15%;
+  width: 100%;
   margin: auto;
   margin-bottom: 0;
   margin-top: 0;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .fold{
-  width: 45%;
-  height: 100%;
-  background-color: rgb(143, 191, 219); 
+height: 87%;
+width: 45%;
+background-color: rgb(221, 239, 250); 
+box-shadow: inset -4px -39px 12px -18px rgba(65, 96, 114, 0.75),0px -10px 20px 20px rgba(16, 36, 36, 0.75);
+border: 3px solid rgb(106, 138, 156);
+border-top: none;
 }
-
+.fold-edge-left, .fold-edge-right{
+  height: 100%;
+  width:23.5%;
+  background-color:rgb(221, 239, 250) ;
+  box-shadow: inset -4px -39px 12px -18px rgba(65, 96, 114, 0.75),0px 16px 10px -10px rgba(104, 110, 112, 0.75);
+  z-index: 2;
+}
+.fold-edge-left{
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.fold-edge-right{
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
 .navigation,
 .first,
 .second,
@@ -191,7 +226,8 @@ main {
   width: 5rem;
   z-index: 2;
   background-color:  rgb(202, 202, 223);
-  border:none
+  border:none;
+  margin-right: 2%;
 }
 .borderButtonDetail{
   position: absolute;
