@@ -2,6 +2,9 @@ let message = " ";
 let count = 0;
 let previous = "";
 let time = 0;
+let upper = false;
+let screen=""
+
 
 function clickingOnButton(letters) {
   let currentTime = Date.now();
@@ -11,26 +14,50 @@ function clickingOnButton(letters) {
     if (count == letters.length) {
       count = 0;
     }
-    message = message.slice(0, -1) + `${letters.charAt(count)}`;
+    if(upper == true){
+      message = message.slice(0, -1) + letters.substring(count,count+1).toUpperCase();
+    }else{
+      message = message.slice(0, -1) + `${letters.charAt(count)}`;
+    }
+    if(letters == '*'){
+      upper = true;
+      message=message.slice(0,-1);
+    }
   } else {
     count = 0;
-    message += letters.charAt(count);
+    if(previous!=letters && previous != '*'){
+      upper = false;
+    }
+    if(upper == true){
+      message +=letters.substring(count,count+1).toUpperCase();
+    }else{
+      message +=letters.substring(count,count+1)
+    }
   }
 
   document.getElementById("textual").innerHTML = message;
   time = currentTime;
   previous = letters;
+  screen="messages"
 }
+
 
 function eraser(){
   document.getElementById("textual").innerHTML=document.getElementById("textual").innerHTML.slice(0, document.getElementById("textual").innerHTML.length-1)
 }
 
 function submit(){
-  if(document.getElementById("textual").innerHTML.length>1){
+  if(document.getElementById("textual").innerHTML!==" "){
   document.getElementById("submited-msg").innerHTML+=document.getElementById("textual").innerHTML+"<br>"
   document.getElementById("textual").innerHTML=""
   }
+}
+
+function goToMenu(){
+  document.getElementById("menu").innerHTML="MENU"
+  document.getElementById("textual").innerHTML=textual.parentNode.removeChild(textual)
+  screen="menu"
+  console.log(message)
 }
 
 function clock(){
