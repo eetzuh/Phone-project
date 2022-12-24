@@ -18,11 +18,17 @@
         <div class="container-phone">
             <div class="phone-body">
                 <div class="screen">
-                    <div class="phone-display"><p id="time"></p><p id="textual"></p></div>
+                    <div class="upperPart"></div>
+                    <div class="phone-display"><p id="time"><div></p><p id="textual"></p><p id="menu"></p></div></div>
                 </div>
                 <div class="buttons">
-                    <!-- add arrows -->
-                    <div class="navigation"><button name="left" class="leftArrow" onclick=""></button><button name="ok" class="nav" onclick="submit()"><button name="borderButton" class="borderButtonDetail" onclick=""></button><button name="right" class="rightArrow" onclick=""></button></div>
+                    <div class="fold-cont"><div class="fold-edge-left"></div> <div class="fold"></div> <div class="fold-edge-right"></div></div>
+                
+                    <div class="navigation">
+                        <div class="left-nav"><button class="menuBtn" onclick="goToMenu()">M</button><button class="call"></button></div>
+                        <button name="left" class="leftArrow"></button><button name="ok" class="nav" onclick="submit()"><button name="borderButton" class="borderButtonDetail" onclick=""></button><button name="right" class="rightArrow" onclick=""></button>
+                        <div class="right-nav"><button class="backBtn" onclick="goBack()">B</button><button class="hangup"></button></div>
+                    </div>
                     <div class="first">
                         <button name="1" class="leftButton" onclick="eraser()">
                               <span class="numberInsideButton">1</span>
@@ -74,8 +80,9 @@
                             <span class="numberInsideButton" style="top:0.1rem">#</span>
                         </button></div>
                 </div>
+            </div>
         </div>
-        </div>
+        
         <div class="user-inputs">
             <div class="outputs"><h1 class="message-menu">Your messages:</h1></div>
             <div class="messages"><p id="submited-msg"></p></div>

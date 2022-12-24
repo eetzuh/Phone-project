@@ -3,6 +3,8 @@ let count = 0;
 let previous = "";
 let time = 0;
 let upper = false;
+let screen=""
+
 
 function clickingOnButton(letters) {
   let currentTime = Date.now();
@@ -36,17 +38,26 @@ function clickingOnButton(letters) {
   document.getElementById("textual").innerHTML = message;
   time = currentTime;
   previous = letters;
+  screen="messages"
 }
+
 
 function eraser(){
   document.getElementById("textual").innerHTML=document.getElementById("textual").innerHTML.slice(0, document.getElementById("textual").innerHTML.length-1)
 }
 
 function submit(){
-  if(document.getElementById("textual").innerHTML.length>1){
+  if(document.getElementById("textual").innerHTML!==" "){
   document.getElementById("submited-msg").innerHTML+=document.getElementById("textual").innerHTML+"<br>"
   document.getElementById("textual").innerHTML=""
   }
+}
+
+function goToMenu(){
+  document.getElementById("menu").innerHTML="MENU"
+  document.getElementById("textual").innerHTML=textual.parentNode.removeChild(textual)
+  screen="menu"
+  console.log(message)
 }
 
 function clock(){
