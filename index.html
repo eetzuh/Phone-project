@@ -19,52 +19,54 @@
             <div class="phone-body">
                 <div class="screen">
                     <div class="upperPart"></div>
-                    <div class="phone-display"><p id="time"><div></p><p id="textual"></p><p id="menu"></p></div></div>
+                    <div class="phone-display"><p id="time"><div id="shownScreen"></p><p id="textual"></p><p id="menu"></p></p><p id="sendEmail"></p></div></div>
                 </div>
                 <div class="buttons">
                     <div class="fold-cont"><div class="fold-edge-left"></div> <div class="fold"></div> <div class="fold-edge-right"></div></div>
                 
                     <div class="navigation">
-                        <div class="left-nav"><button class="menuBtn" onclick="goToMenu()">M</button><button class="call"></button></div>
-                        <button name="left" class="leftArrow"></button><button name="ok" class="nav" onclick="submit()"><button name="borderButton" class="borderButtonDetail" onclick=""></button><button name="right" class="rightArrow" onclick=""></button>
-                        <div class="right-nav"><button class="backBtn" onclick="goBack()">B</button><button class="hangup"></button></div>
+                        <div class="left-nav"><button class="menuBtn" onclick="goToMenu()">M</button><button class="call" style="color: rgb(18, 219, 18);" onclick='call()'>&#9742</button></div>
+                        <button name="up" class="upArrow">&#9650</button><button name="left" class="leftArrow">&#9664</button>
+                        <button name="ok" class="nav" onclick="submit()"><button name="borderButton" class="borderButtonDetail" onclick=""></button>
+                        <button name="right" class="rightArrow" onclick="">	&#9654</button><button name="down" class="downArrow">&#9660</button>
+                        <div class="right-nav"><button class="backBtn" onclick="goBack()">B</button><button class="hangup" style="color:red;" onclick="eraser()">&#9742</button></div>
                     </div>
                     <div class="first">
-                        <button name="1" class="leftButton" onclick="eraser()">
+                        <button name="1" class="leftButton" onclick="clickingOnButton('1')">
                               <span class="numberInsideButton">1</span>
                         </button>
-                        <button name="2" class="middleButton" onclick="clickingOnButton('abc')">
+                        <button name="2" class="middleButton" onclick="clickingOnButton('abc2')">
                             <span class="numberInsideButton">2</span>
                             <span class="textInsideButton">abc</span>
                         </button>
-                        <button name="3" class="rightButton" onclick="clickingOnButton('def')">
+                        <button name="3" class="rightButton" onclick="clickingOnButton('def3')">
                             <span class="numberInsideButton">3</span>
                             <span class="textInsideButton">def</span>
                         </button></div>
                     <div class="second">
-                        <button name="4" class="leftButton" onclick="clickingOnButton('ghi')">
+                        <button name="4" class="leftButton" onclick="clickingOnButton('ghi4')">
                             <span class="numberInsideButton">4</span>
                             <span class="textInsideButton">ghi</span>
                         </button>
-                        <button name="5" class="middleButton" onclick="clickingOnButton('jkl')">
+                        <button name="5" class="middleButton" onclick="clickingOnButton('jkl5')">
                             <span class="numberInsideButton">5</span>
                             <span class="textInsideButton">jkl</span>
                         </button>
-                        <button name="6" class="rightButton" onclick="clickingOnButton('mno')">
+                        <button name="6" class="rightButton" onclick="clickingOnButton('mno6')">
                             <span class="numberInsideButton" style="top:0rem">6</span>
                             <span class="textInsideButton">mno</span>
                         </button>
                     </div>    
                     <div class="third">
-                        <button name="7" class="leftButton" onclick="clickingOnButton('pqrs')">
+                        <button name="7" class="leftButton" onclick="clickingOnButton('pqrs7')">
                             <span class="numberInsideButton">7</span>
                             <span class="textInsideButton">pqrs</span>
                         </button>
-                        <button name="8" class="middleButton" onclick="clickingOnButton('tuv')">
+                        <button name="8" class="middleButton" onclick="clickingOnButton('tuv8')">
                             <span class="numberInsideButton" style="top:0rem">8</span>
                             <span class="textInsideButton">tuv</span>
                         </button>
-                        <button name="9" class="rightButton" onclick="clickingOnButton('wxyz')">
+                        <button name="9" class="rightButton" onclick="clickingOnButton('wxyz9')">
                             <span class="numberInsideButton">9</span>
                             <span class="textInsideButton" style="top:-0.7rem">wxyz</span>
                         </button></div>
@@ -72,13 +74,14 @@
                         <button name="asterisk" class="leftButton" onclick="clickingOnButton('*')">
                             <span class="numberInsideButton" style="top:0.4rem">*</span>
                         </button>
-                        <button name="0" class="middleButton" onclick="clickingOnButton(' ')">
+                        <button name="0" class="middleButton" onclick="clickingOnButton(' 0+')">
                             <span class="numberInsideButton" style="top:-0.1rem">0</span>
                             <span class="textInsideButton">+</span>
                         </button>
                         <button name="hash" class="rightButton" onclick="clickingOnButton('#')">
                             <span class="numberInsideButton" style="top:0.1rem">#</span>
                         </button></div>
+                    <div class="bottom-details"><div class="rounded-edge-left"></div><div></div><div class="rounded-edge-right"></div></div>
                 </div>
             </div>
         </div>
