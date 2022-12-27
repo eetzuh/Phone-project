@@ -19,16 +19,16 @@
             <div class="phone-body">
                 <div class="screen">
                     <div class="upperPart"></div>
-                    <div class="phone-display"><p id="time"><div id="shownScreen"></p><p id="textual"></p><p id="menu"></p></p><p id="sendEmail"></p></div></div>
+                    <div class="phone-display"><p id="time"><div id="shownScreen"></p><p id="textual"></p><p id="menu"></p></p><p id="sendEmail"></p><p id="playGame"></p></div></div>
                 </div>
                 <div class="buttons">
                     <div class="fold-cont"><div class="fold-edge-left"></div> <div class="fold"></div> <div class="fold-edge-right"></div></div>
                 
                     <div class="navigation">
                         <div class="left-nav"><button class="menuBtn" onclick="goToMenu()">M</button><button class="call" style="color: rgb(18, 219, 18);" onclick='call()'>&#9742</button></div>
-                        <button name="up" class="upArrow">&#9650</button><button name="left" class="leftArrow">&#9664</button>
+                        <button name="up" class="upArrow" onclick="goUp()">&#9650</button><button name="left" class="leftArrow">&#9664</button>
                         <button name="ok" class="nav" onclick="submit()"><button name="borderButton" class="borderButtonDetail" onclick=""></button>
-                        <button name="right" class="rightArrow" onclick="">	&#9654</button><button name="down" class="downArrow">&#9660</button>
+                        <button name="right" class="rightArrow" onclick="">	&#9654</button><button name="down" class="downArrow" onclick="goDown()">&#9660</button>
                         <div class="right-nav"><button class="backBtn" onclick="goBack()">B</button><button class="hangup" style="color:red;" onclick="eraser()">&#9742</button></div>
                     </div>
                     <div class="first">
