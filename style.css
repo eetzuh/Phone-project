@@ -117,7 +117,7 @@ main {
     font-size: 20px;
     margin: 0;
 }
-#sendEmail{
+#sendEmail, #playGame{
   font-family: "Lucida Sans Typewriter", "Lucida Console", monaco,
     "Bitstream Vera Sans Mono", monospace;
     font-size: 15px;
